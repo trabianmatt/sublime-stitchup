@@ -1,0 +1,10 @@
+[
+{
+  "caption": "NPM::Edit Package",
+  "command": "npm_edit"
+},
+{
+  "caption": "NPM::Add Package Folder to Project",
+  "command": "npm_add_folder_to_project"
+}
+]
