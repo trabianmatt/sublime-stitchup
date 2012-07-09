@@ -138,34 +138,34 @@ class NpmPackageCommand(NpmWindowCommand):
 
     def add_dependencies(self, dependencies):
 
+        discovered = {}
+
         for package in dependencies:
+
+            print package
 
             package_entry = [package]
 
             info = dependencies.get(package)
 
-            if type(info) == types.DictType:
+            path = info.get('path')
+            description = info.get('description')
 
-                path = info.get('path')
-                description = info.get('description')
+            if path != None:
 
-                # print path
+                if description != None:
+                    package_entry.append(description)
 
-                if path != None:
+                package_entry.append(path)
 
-                    if description != None:
-                        package_entry.append(description)
+                self.package_list.append(package_entry)
 
-                    package_entry.append(path)
+                self.all_dependencies[path] = info
 
-                    self.package_list.append(package_entry)
+                discovered.update(info.get('dependencies'))
 
-                    self.all_dependencies[path] = info
-
-                    self.add_dependencies(info.get('dependencies'))
-
-            else:
-                print dependencies
+        if discovered != {}:
+            self.add_dependencies(discovered)
 
     def panel_done(self, picked):
 
@@ -174,7 +174,7 @@ class NpmPackageCommand(NpmWindowCommand):
 
         package = self.package_list[picked]
 
-        package_info = self.all_dependencies[package[len(package) - 1]]
+        package_info = self.all_dependencies[package[-1]]
 
         self.run_with_package(package_info)
 
