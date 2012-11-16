@@ -1,0 +1,7 @@
+[
+  { "keys": ["g", "r"], "command": "stitchup_open_require",
+    "context": [{"key": "setting.command_mode"}]
+  },
+  { "keys": ["ctrl+shift+o"], "command": "stitchup_open"},
+  { "keys": ["alt+ctrl+o"], "command": "stitchup_require"}
+]

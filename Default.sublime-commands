@@ -1,10 +1,14 @@
 [
 {
-  "caption": "NPM::Edit Package",
-  "command": "npm_edit"
+  "caption": "StitchUp::Open File",
+  "command": "stitchup_open"
 },
 {
-  "caption": "NPM::Add Package Folder to Project",
-  "command": "npm_add_folder_to_project"
+  "caption": "StitchUp::Open Required File",
+  "command": "stitchup_open_require"
+},
+{
+  "caption": "StitchUp::Add Require",
+  "command": "stitchup_require"
 }
 ]

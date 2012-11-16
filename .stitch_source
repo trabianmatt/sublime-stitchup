@@ -1,0 +1,6 @@
+[
+  [ "app/test", "~/Library/Application Support/Sublime Text 2/Packages/StitchUp/fixtures/test.js" ],
+  [ "app/other_test", "~/Library/Application Support/Sublime Text 2/Packages/StitchUp/fixtures/other_test.js" ],
+  [ "app/more/index", "~/Library/Application Support/Sublime Text 2/Packages/StitchUp/fixtures/more/index.coffee" ],
+  [ "app/more/test_more", "~/Library/Application Support/Sublime Text 2/Packages/StitchUp/fixtures/more/test_more.js" ]
+]
