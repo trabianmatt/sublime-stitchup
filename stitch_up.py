@@ -24,9 +24,6 @@ pkg_file_cache = {}
 def pkg_file(directory, alternateDirectory):
     global pkg_file_cache
 
-    # print directory
-    # print alternateDirectory
-
     retval = False
     leaf_dir = directory
 
